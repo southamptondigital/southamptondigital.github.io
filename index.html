@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Southampton.Digital</title>
+  <link rel='stylesheet' href='https://cdn.concisecss.com/concise.min.css'>
+  <link rel="stylesheet" href="https://cdn.concisecss.com/concise-ui/concise-ui.min.css">
+  <link rel='stylesheet' href='styles/style.css'>
+
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+</head>
+
+<body>
+
+  <main container>
+    <header>
+      <h1>Southampton.Digital</h1>
+      <p>All the wonderous digital events in Southampton</p>
+    </header>
+
+      <section id='events'>
+        <div class="card-box" v-for='event in events'>
+          <div class="header">
+            {{ event.date }}
+          </div>
+          <div class="card-content">
+            <h3 class="title">{{ event.name }}</h3>
+            <p class="content">{{ event.description }}</p>
+          </div>
+        </div>
+      </section>
+
+    <footer>
+    <div id="firebaseui-auth-container"></div>
+      <p>Copyright etc</p>
+    </footer>
+  </main>
+
+
+</body>
+<!-- Vue -->
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <!-- Firebase -->
+  <script src="https://gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+  <!-- VueFire -->
+  <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
+<script src='app.js'></script>
+
+</html>
