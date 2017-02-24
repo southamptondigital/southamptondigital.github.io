@@ -16,6 +16,7 @@
     <header>
       <h1>Southampton.Digital</h1>
       <p>All the wonderous digital events in Southampton</p>
+      <div id="firebaseui-auth-container"></div>
     </header>
 
       <section id='events'>
@@ -38,12 +39,33 @@
 
 
 </body>
-<!-- Vue -->
+  <!-- Vue -->
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <!-- Firebase -->
   <script src="https://gstatic.com/firebasejs/3.5.2/firebase.js"></script>
   <!-- VueFire -->
   <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
-<script src='app.js'></script>
+  <!-- Our App -->
+  <script src='app.js'></script>
+  <!-- Fire Auth -->
+  <script src="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.css" />
+  <script type="text/javascript">
+        // FirebaseUI config.
+        var uiConfig = {
+          signInSuccessUrl: '<url-to-redirect-to-on-success>',
+          signInOptions: [
+            // Leave the lines as is for the providers you want to offer your users.
+            firebase.auth.GithubAuthProvider.PROVIDER_ID,
+          ],
+          // Terms of service url.
+          tosUrl: '<your-tos-url>'
+        };
+
+        // Initialize the FirebaseUI Widget using Firebase.
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        // The start method will wait until the DOM is loaded.
+        ui.start('#firebaseui-auth-container', uiConfig);
+      </script>
 
 </html>
