@@ -12,14 +12,14 @@
 
 <body>
 
-  <main container>
+  <main id='app' container>
     <header>
       <h1>Southampton.Digital</h1>
       <p>All the wonderous digital events in Southampton</p>
       <div id="firebaseui-auth-container"></div>
     </header>
 
-      <section id='events'>
+      <section>
         <div class="card-box" v-for='event in events'>
           <div class="header">
             {{ event.date }}
@@ -32,7 +32,19 @@
       </section>
 
     <footer>
-    <div id="firebaseui-auth-container"></div>
+      <div class="form">
+      <h6>New Event:</h6>
+        <div>
+          <input id="eventName" type="text" name="name" placeholder="Event Name" v-model="event.name">
+        </div>
+        <div>
+          <input id="eventDescription" type="text" name="description" placeholder="Event Description" v-model="event.description">
+        </div>
+        <div>
+          <input id="eventDate" type="date" name="date" v-model="event.date">
+        </div>
+        <button v-on:click="addEvent">Submit</button>
+      </div>
       <p>Copyright etc</p>
     </footer>
   </main>
@@ -50,22 +62,22 @@
   <!-- Fire Auth -->
   <script src="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.js"></script>
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.css" />
-  <script type="text/javascript">
-        // FirebaseUI config.
-        var uiConfig = {
-          signInSuccessUrl: '<url-to-redirect-to-on-success>',
-          signInOptions: [
-            // Leave the lines as is for the providers you want to offer your users.
-            firebase.auth.GithubAuthProvider.PROVIDER_ID,
-          ],
-          // Terms of service url.
-          tosUrl: '<your-tos-url>'
-        };
+  <!-- <script type="text/javascript">
+    // FirebaseUI config.
+    var uiConfig = {
+      signInSuccessUrl: '<url-to-redirect-to-on-success>',
+      signInOptions: [
+        // Leave the lines as is for the providers you want to offer your users.
+        firebase.auth.GithubAuthProvider.PROVIDER_ID,
+      ],
+      // Terms of service url.
+      tosUrl: '<your-tos-url>'
+    };
 
-        // Initialize the FirebaseUI Widget using Firebase.
-        var ui = new firebaseui.auth.AuthUI(firebase.auth());
-        // The start method will wait until the DOM is loaded.
-        ui.start('#firebaseui-auth-container', uiConfig);
-      </script>
+    // Initialize the FirebaseUI Widget using Firebase.
+    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+    // The start method will wait until the DOM is loaded.
+    ui.start('#firebaseui-auth-container', uiConfig);
+  </script> -->
 
 </html>

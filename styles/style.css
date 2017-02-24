@@ -36,6 +36,15 @@ footer {
   background-color: white;
 }
 
+.form {
+  display: flex;
+  align-items: center;
+}
+
+.form > button {
+  margin: 0;
+}
+
 @media screen and (min-width:580px){
   section {
     flex-wrap: wrap;

@@ -1,5 +1,11 @@
 // app js
-//
+
+function guidGenerator() {
+    var S4 = function() {
+       return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
+    };
+    return (S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4());
+}
 
 var config = {
       apiKey: "AIzaSyDUinSVgzS-Q2YWIV7lvrCEHutxgi7skWc",
@@ -12,7 +18,7 @@ var config = {
     var eventsRef = firebase.database().ref('events')
 
 new Vue({
-  el: '#events',
+  el: '#app',
 
   data: {
     order: 1,
@@ -39,15 +45,15 @@ new Vue({
     },
 
     addEvent: function() {
+      console.log(this.event);
       if(this.event.name) {
-        this.events.push(this.event);
-        this.event = { name: '', description: '', date: '' };
-      }
-    },
-
-    deleteEvent: function(index) {
-      if (confirm('Are you sure you want to delete this event?')) {
-        this.events.splice(index,1);
+        console.log(this.event.name);
+        var id = guidGenerator();
+        firebase.database().ref('/events/' + id).set({
+          name: this.event.name,
+          description: this.event.description,
+          date: this.event.date,
+        });
       }
     },
   },
