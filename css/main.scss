@@ -1,6 +1,7 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+
 body{
   background-color: #C65146;
   box-sizing: border-box;
@@ -39,20 +40,6 @@ footer {
   background-color: white;
 }
 
-.form {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.form div {
-  flex: 1 0 auto;
-}
-
-.form > button {
-  margin: 0;
-}
-
 @media screen and (min-width:580px){
   section {
     flex-wrap: wrap;
@@ -62,7 +49,6 @@ footer {
   .card-box {
     width: 44%;
   }
-
 }
 
 @media screen and (min-width:768px){
