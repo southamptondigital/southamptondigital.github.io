@@ -1,83 +1,19 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
 
-<head>
-  <title>Southampton.Digital</title>
-  <link rel='stylesheet' href='https://cdn.concisecss.com/concise.min.css'>
-  <link rel="stylesheet" href="https://cdn.concisecss.com/concise-ui/concise-ui.min.css">
-  <link rel='stylesheet' href='styles/style.css'>
+<section>
 
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-</head>
-
-<body>
-
-  <main id='app' container>
-    <header>
-      <h1>Southampton.Digital</h1>
-      <p>All the wonderous digital events in Southampton</p>
-      <div id="firebaseui-auth-container"></div>
-    </header>
-
-      <section>
-        <div class="card-box" v-for='event in events'>
+{% for event in site.events %}
+      <div class="card-box">
           <div class="header">
-            {{ event.date }}
+            {{ event.date | date: '%B %d, %Y'}}
           </div>
           <div class="card-content">
-            <h3 class="title">{{ event.name }}</h3>
+            <h3 class="title">{{ event.name}}</h3>
             <p class="content">{{ event.description }}</p>
           </div>
         </div>
-      </section>
+{% endfor %}
 
-    <footer>
-      <div class="form">
-      <h6>New Event:</h6>
-        <div>
-          <input id="eventName" type="text" name="name" placeholder="Event Name" v-model="event.name">
-        </div>
-        <div>
-          <input id="eventDescription" type="text" name="description" placeholder="Event Description" v-model="event.description">
-        </div>
-        <div>
-          <input id="eventDate" type="date" name="date" v-model="event.date">
-        </div>
-        <button v-on:click="addEvent">Submit</button>
-      </div>
-      <p>Copyright etc</p>
-    </footer>
-  </main>
-
-
-</body>
-  <!-- Vue -->
-  <script src="https://unpkg.com/vue/dist/vue.js"></script>
-  <!-- Firebase -->
-  <script src="https://gstatic.com/firebasejs/3.5.2/firebase.js"></script>
-  <!-- VueFire -->
-  <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
-  <!-- Our App -->
-  <script src='app.js'></script>
-  <!-- Fire Auth -->
-  <!-- <script src="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.css" /> -->
-  <!-- <script type="text/javascript">
-    // FirebaseUI config.
-    var uiConfig = {
-      signInSuccessUrl: '<url-to-redirect-to-on-success>',
-      signInOptions: [
-        // Leave the lines as is for the providers you want to offer your users.
-        firebase.auth.GithubAuthProvider.PROVIDER_ID,
-      ],
-      // Terms of service url.
-      tosUrl: '<your-tos-url>'
-    };
-
-    // Initialize the FirebaseUI Widget using Firebase.
-    var ui = new firebaseui.auth.AuthUI(firebase.auth());
-    // The start method will wait until the DOM is loaded.
-    ui.start('#firebaseui-auth-container', uiConfig);
-  </script> -->
-
-</html>
+</section>
