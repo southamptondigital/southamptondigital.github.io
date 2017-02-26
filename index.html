@@ -13,11 +13,16 @@ layout: default
     {% if eventDate >=  currentDate %}
       <div class="card-box">
         <div class="header">
-          {{ event.date | date: '%B %d, %Y' }}
+          {{ event.date | date: '%B %d, %Y; %l:%M%P' }}
         </div>
         <div class="card-content">
-          <h3 class="title">{{ event.name}}</h3>
+          <h3 class="title">
+            <a href="{{ event.href }}">
+              {{ event.name }}
+            </a>
+          </h3>
           <p class="content">{{ event.description }}</p>
+          <p class="group">{{ event.group_name }}</p>
         </div>
       </div>
     {% endif %}

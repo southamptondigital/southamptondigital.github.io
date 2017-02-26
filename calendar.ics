@@ -1,0 +1,18 @@
+---
+layout: none
+---
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:http://southampton.digital/
+METHOD:PUBLISH
+{% assign events = site.events | sort: 'date' %}{% for event in events %}{% capture currentDate %}{{ site.time | date: '%F' }}{% endcapture %}{% capture eventDate %}{{ event.date | date: '%F' }}{% endcapture %}{% if eventDate >= currentDate %}BEGIN:VEVENT
+UID:{{ event.date | date: "%Y%m%d" }}-{{ event.slug }}@southampton.digital
+ORGANIZER;CN="{{ event.group_name }}":MAILTO:{{ event.group_mailto }}
+LOCATION:{{ event.location }}
+SUMMARY:{{ event.name }}
+CLASS:PUBLIC
+DTSTART:{{ event.date | date: "%Y%m%dT%H%M%SZ" }}
+DTEND:{{ event.date_end | date: "%Y%m%dT%H%M%SZ" }}
+DTSTAMP:{{ event.date | date: "%Y%m%dT%H%M%SZ" }}
+END:VEVENT
+{% endif %}{% endfor %}END:VCALENDAR
