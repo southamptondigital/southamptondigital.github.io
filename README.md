@@ -9,16 +9,11 @@ Once you have Ruby set up and the repository cloned:
 ```
 gem install bundle
 bundle install
-bundle exec jekyll build --watch
+bundle exec jekyll build
+bundle exec jekyll serve --watch
 ```
 
-Then serve up the generated `_site` folder; e.g.:
-
-```
-cd _site
-python -m SimpleHTTPServer
-```
-http://localhost:8000
+Then open http://localhost:4000
 
 ## TODO/Ideas:
 - Logo / Design review
