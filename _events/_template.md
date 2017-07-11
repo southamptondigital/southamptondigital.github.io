@@ -7,6 +7,7 @@ date:
 date_end: 
 location: 
 href: 
+tickets_href:
 
 food: 
 beer: 
