@@ -11,7 +11,7 @@ group_contact_href: https://www.meetup.com/DeveloperSouthCoast/
 
 # Use ISO8601 format: YYYY-MM-DDTHH:MM:SSZ
 date: 2017-07-20T19:00:00+01:00
-date: 2017-07-20T21:00:00+01:00
+date_end: 2017-07-20T21:00:00+01:00
 
 # This will be put into a Google Maps search string
 location: Avenue St Andrew's URC, The Avenue, Southampton
