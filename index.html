@@ -51,9 +51,9 @@ layout: default
               <li><a class="item" target="_blank" href="{{ event.href }}">Website</a></li>
               <li><a class="item" target="_blank" href='http://maps.google.co.in/maps?q="{{ event.location }}"'>Map</a></li>
               {% if event.tickets_href %}
-              <li><a class="item"href='mailto:"{{ event.tickets_href }}"'>Tickets</a></li>
+              <li><a class="item" href='{{ event.tickets_href }}'>Tickets</a></li>
               {% else %}
-              <li><a class="item"href='mailto:"{{ event.group_mailto }}"'>Contact</a></li>
+              <li><a class="item" href='mailto:"{{ event.group_mailto }}"'>Contact</a></li>
               {% endif %}
             </ul>
         </div>
