@@ -4,12 +4,13 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+southampton.digital is a community of people in and around the Southampton (UK)
+area who are interested in digital - either professionally or as a hobby.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jekyll" %} /
-[minima](https://github.com/jekyll/minima)
+We aim to be as inclusive as possible.
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+Our website aims to collate local events that may be of interest to our
+community - if your event is not listed here then please hop onto slack and
+shoot one of the [admins](/admins) a message, or even better raise an issue here:
+
+https://github.com/southamptondigital/southamptondigital.github.io/issues/new

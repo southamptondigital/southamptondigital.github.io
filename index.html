@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<section>
+<div class='flex'>
   <!-- Sort the events by date -->
   {% assign events = site.events | sort: 'date' %}
   <!-- Loop through events -->
@@ -64,4 +64,4 @@ layout: default
       </div>
     {% endif %}
   {% endfor %}
-</section>
+</div>
