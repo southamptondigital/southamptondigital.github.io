@@ -5,7 +5,7 @@
   <title>Southampton.Digital</title>
   <link rel='stylesheet' href='https://cdn.concisecss.com/concise.min.css'>
   <link rel="stylesheet" href="https://cdn.concisecss.com/concise-ui/concise-ui.min.css">
-  <link rel='stylesheet' href='css/main.css'>
+  <link rel='stylesheet' href='/css/main.css'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 </head>
 
@@ -13,14 +13,17 @@
 
   <main container>
     <header>
-      <h1>Southampton.Digital</h1>
-      <p>All the wonderous digital events in Southampton | <a href="http://slack.southampton.digital/">Join us on Slack</a></p>
+      <h1><a href='/'>Southampton.Digital</a></h1>
+      <p>All the wonderous digital events in and around Southampton | <a href="http://slack.southampton.digital/">Join us on Slack</a></p>
     </header>
 
-     {{ content }}
+    <section>
+      {{ content }}
+    </section>
 
     <footer>
-      <p>southampton.digital is an open and independent calendar of digital events in and around Southampton; if you would like to have your event listed here please <a href="https://github.com/southamptondigital/southamptondigital.github.io/issues/new">request it here</a></p>
+      <p>southampton.digital is an independent community of people in and around Southampton who are interested in digital; if you would like to have your event listed please <a href="https://github.com/southamptondigital/southamptondigital.github.io/issues/new">request it here</a></p>
+      <p><a href='/about'>About</a> | <a href='/admins'>Team</a> | <a href='/code_of_conduct'>Code of Conduct</a></p>
     </footer>
   </main>
 </body>
