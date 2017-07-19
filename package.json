@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "js-yaml": "^3.9.0",
+    "rrule": "^2.2.0"
+  }
+}
