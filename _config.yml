@@ -26,3 +26,71 @@ theme: minima
 
 collections:
   - events
+
+prose:
+  rooturl: '_events'
+  siteurl: 'https://southampton.digital'
+  metadata:
+    _events:
+      - name: "name"
+        field:
+          element: "text"
+          label: "Event Name"
+      - name: "description"
+        field:
+          element: "textarea"
+          label: "Event Description"
+      - name: "href"
+        field:
+          element: "text"
+          label: "Event URL"
+      - name: "ticket_href"
+        field:
+          element: "text"
+          label: "Link to purchase tickets"
+      - name: "ticket_price"
+        field:
+          element: "text"
+          label: "Price of the event"
+      - name: "group_name"
+        field:
+          element: "text"
+          label: "Name of the events group"
+      - name: "group_contact_href"
+        field:
+          element: "text"
+          label: "Contact link"
+          help: "use `mailto:person@example.com` for email; or `tel:01234...` for phone, or `http://...` for web"
+      - name: "date"
+        field:
+          element: "text"
+          label: "Date & time start of your event"
+          help: "Use ISO8601 format: YYYY-MM-DDTHH:MM:SSZ"
+      - name: "date_end"
+        field:
+          element: "text"
+          label: "Date & time end of your event"
+          help: "Use ISO8601 format: YYYY-MM-DDTHH:MM:SSZ"
+      - name: "location"
+        field:
+          element: "text"
+          label: "Location"
+          help: "This will be put into a Google Maps search string"
+      - name: "food"
+        field:
+          element: "button"
+          label: "Food Available"
+          on: "yes"
+          off: "no"
+      - name: "beer"
+        field:
+          element: "button"
+          label: "Beer / Drink Available"
+          on: "yes"
+          off: "no"
+      - name: "on_site_parking"
+        field:
+          element: "button"
+          label: "On Site Parking Available"
+          on: "yes"
+          off: "no"
