@@ -88,6 +88,18 @@ prose:
           label: "Beer / Drink Available"
           on: "yes"
           off: "no"
+      - name: "cake"
+        field:
+          element: "button"
+          label: "Cake Available"
+          on: "yes"
+          off: "no"
+      - name: "coffee"
+        field:
+          element: "button"
+          label: "Coffee Available"
+          on: "yes"
+          off: "no"
       - name: "on_site_parking"
         field:
           element: "button"

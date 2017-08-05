@@ -33,7 +33,7 @@ layout: default
           {% if event.ticket_price %}
             <small>Price: {{event.ticket_price}}</small>
           {% endif %}
-          {% if event.food or event.beer or event.on_site_parking %}
+          {% if event.food or event.beer or event.cake or event.coffee or event.on_site_parking %}
             <small>Includes: </small>
           {% endif %}
           {% if event.food %}
@@ -41,6 +41,12 @@ layout: default
           {% endif %}
           {% if event.beer %}
             <span>🍺</span>
+          {% endif %}
+          {% if event.cake %}
+            <span>🍰</span>
+          {% endif %}
+          {% if event.coffee %}
+            <span>☕️</span>
           {% endif %}
           {% if event.on_site_parking %}
             <span>🚙</span>
