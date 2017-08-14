@@ -1,7 +1,7 @@
 ---
 name: Agile South Coast
 description: This groups meets monthly to discuss topics about the whole Agile Experience within local technical organisations and people in the Southampton / Hampshire area. This month's talk is Making Distributed Retrospectives More Engaging - with John Barratt.
-href: https://www.eventbrite.co.uk/e/winchester-creatives-tickets-36827263336
+href: https://www.meetup.com/Agile-South-Coast-Southampton-Chapter/events/233596947/
 # If you use eventbrite or similar, place tickets link here
 ticket_price:
 
